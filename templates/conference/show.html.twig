@@ -1,5 +1,7 @@
 {% extends 'base.html.twig' %}
 
+{% dump(conference) %}
+
 {% block title %}Conference Guestbook - {{ conference }}{% endblock %}
 
 {% block body %}
@@ -28,4 +30,6 @@
     {% else %}
         <div>No comments have been posted yet for this conference.</div>
     {% endif %}
+    <h2>Add your own feedback</h2>
+    {{ form(comment_form) }}
 {% endblock %}
